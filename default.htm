@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts Project</title>
+	<script  type="text/javascript" src=".\jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href=".\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href=".\defaultstyles.css">
+	<!--script  type="text/javascript" src=".\contactspa.js"></script-->
+	<script  type="text/javascript" src=".\newcontact.js"></script>
+	<style type="text/css">
+	
+	</style>
+	<script type="text/javascript">	
+	</script>
+</head>
+<body>
+	<div id ="navigationBar" class="navbar  navbar-default navbar-static-top">
+		<span class="brand">CONTACTS PROJECT</span>
+		<button id="addContacts" class="btn btn-success navbar-btn" onclick="VIEW.doAddContact()" style="float:right;">ADD</button>
+	</div>
+	<div id="addoredit"  class = "divhidden">
+		 <input type="text" id="firstname" placeholder="Enter Name Here" class="form-control input-large" required><span id="errorfirstname" ></span></br>
+		 <input id="phoneNumber" placeholder="Enter Phone Number Here" class="form-control input-large" required><span id="errorphoneNumber"></span></br>
+		 <input type="email" id="email" placeholder="Enter Email Here" class="form-control input-large" required><span id="erroremail"></span></br>
+		 <button id="addContact" class="btn btn-success " onclick="VIEW.addingContact()">ADD CONTACT</button>
+		 <button id="editContact" class="btn btn-success " Contact_id = "" onclick="VIEW.editingContact()">UPDATE CONTACT</button>
+		 <button id="cancelContact" class="btn " onclick="VIEW.cancelAddorEdit()">CANCEL</button></br>
+	</div>
+	</br>
+	<div id="listViewSession">
+		<div id="searchDiv">
+		 <input type="search" id="search" placeholder="Enter Search String Here" class="search input-large">
+		 <button id="searchBtn" class="btn btn-success" onclick="VIEW.getSearchedList()">SEARCH</button>
+		</div>
+		<table id="listTable" class="table table-bordered" width="90%">
+			<thead>
+			<tr>
+				<th width="30%" >Name</th>
+				<th width="25%">Phone Number</th>
+				<th width="30%">E-Mail</th>
+				<th width="15%">Edit/Delete</th>
+			</tr>
+			</thead>
+			<tbody id="tableBody">	
+			</tbody>	
+		</table>
+	</div>
+	<div id="footer">
+      <div class="container">
+        <p class="muted credit">Done by Anand Harshan ( anandharshan@gmail.com) <a href="http://ryanfait.com/sticky-footer/">GIT HUB LINK</a></p>
+      </div>
+    </div>
+</body>
+</html>
